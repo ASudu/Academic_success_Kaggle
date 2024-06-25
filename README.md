@@ -52,18 +52,21 @@ We pick the popular ML models like Decision Trees, Random Forest, K-Nearest Neig
 
 | MODEL | PRECISION (Macro avg) | RECALL (Macro avg) | F1-SCORE (Macro avg) | OVERALL ACCURACY | TRAINING TIME (in seconds) |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| Decision Trees (No preprocessing) | 0.717 | 0.721 | 0.719 | 0.762 | 1.066 |
-| Decision Trees (Oversampling) | 0.722 | 0.726 | 0.724 | 0.764 | 5.182 |
-| Decision Trees (Undersampling) | 0.711 | 0.727 | 0.712 | 0.736 | 1.281 |
-| **Random Forest (No preprocessing)** | **0.813** | **0.793** | **0.801** | **0.835** | **47.316** |
-| Random Forest (Oversampling) | 0.797 | 0.811 | 0.803 | 0.833 | 134.350 |
-| Random Forest (Undersampling) | 0.807 | 0.811 | 0.799 | 0.817 | 32.307 |
-| Naive Bayes Classifier (No preprocessing) | 0.719 | 0.700 | 0.708 | 0.759 | 0.093 |
-| **Naive Bayes Classifier (Oversampling)** | **0.730** | **0.732** | **0.730** | **0.764** | **0.101** |
-| Naive Bayes Classifier (Undersampling) | 0.722 | 0.709 | 0.714 | 0.761 | 0.038 |
-| KNN (No preprocessing) | 0.722 | 0.693 | 0.704 | 0.754 | 0.014 |
-| KNN (Oversampling) | 0.710 | 0.706 | 0.692 | 0.708 | 0.015 |
-| KNN (Undersampling) | 0.714 | 0.708 | 0.695 | 0.712 | 0.010 |
+| Decision Trees (No preprocessing) | 0.718 | 0.722 | 0.720 | 0.762 | 0.861 |
+| Decision Trees (Oversampling) | 0.722 | 0.727 | 0.724 | 0.764 | 2.772 |
+| Decision Trees (Undersampling) | 0.713 | 0.729 | 0.714 | 0.739 | 0.619 |
+| **Random Forest (No preprocessing)** | **0.815** | **0.795** | **0.804** | **0.837** | **36.251** |
+| Random Forest (Oversampling) | 0.814 | 0.801 | 0.805 | 0.836 | 101.397 |
+| Random Forest (Undersampling) | 0.807 | 0.811 | 0.799 | 0.817 |20.680 |
+| Naive Bayes Classifier (No preprocessing) | 0.719 | 0.700 | 0.708 | 0.759 | 0.067 |
+| Naive Bayes Classifier (Oversampling) | 0.731 | 0.733 | 0.730 | 0.764 | 0.097 |
+| Naive Bayes Classifier (Undersampling) | 0.723 | 0.711 | 0.716 | 0.761 | 0.046 |
+| KNN (No preprocessing) | 0.722 | 0.693 | 0.704 | 0.754 | 0.017 |
+| KNN (Oversampling) | 0.718 | 0.710 | 0.694 | 0.707 | 0.014 |
+| KNN (Undersampling) | 0.714 | 0.703 | 0.692 | 0.708 | 0.007 |
+| LightGBM (No preprocessing) | 0.816 | 0.797 | 0.805 | 0.838 | 1.274 |
+| **LightGBM (Oversampling)** | **0.818** | **0.803** | **0.809** | **0.840** | **3.703** |
+| LightGBM (Undersampling) | 0.808 | 0.815 | 0.803 | 0.822 | 0.925 |
 
 
 The best models have been marked in bold - we construct an ensemble of Naive Bayes and Random Forest to see if that improves the performance 
