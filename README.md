@@ -31,6 +31,8 @@ pip install -r requirements.txt
 
 We pick the popular ML models like Decision Trees, Random Forest, K-Nearest Neighbors (KNN) and Naive Bayes Classifier. Since the dataset is imbalanced, we try 3 variants of each model - no pre-processing, with oversampling, with undersampling and compare the performance. The results are as follows
 
+#### Outliers not handled
+
 | MODEL | PRECISION (Macro avg) | RECALL (Macro avg) | F1-SCORE (Macro avg) | OVERALL ACCURACY | TRAINING TIME (in seconds) |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | Decision Trees (No preprocessing) | 0.693 | 0.695 | 0.694 | 0.740 | 1.073 |
@@ -45,6 +47,24 @@ We pick the popular ML models like Decision Trees, Random Forest, K-Nearest Neig
 | KNN (No preprocessing) | 0.617 | 0.576 | 0.583 | 0.654 | 0.015 |
 | KNN (Oversampling) | 0.692 | 0.691 | 0.677 | 0.696 | 0.020 |
 | KNN (Undersampling) | 0.691 | 0.689 | 0.677 | 0.696 | 0.008 |
+
+#### Outliers handled
+
+| MODEL | PRECISION (Macro avg) | RECALL (Macro avg) | F1-SCORE (Macro avg) | OVERALL ACCURACY | TRAINING TIME (in seconds) |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| Decision Trees (No preprocessing) | 0.717 | 0.721 | 0.719 | 0.762 | 1.066 |
+| Decision Trees (Oversampling) | 0.722 | 0.726 | 0.724 | 0.764 | 5.182 |
+| Decision Trees (Undersampling) | 0.711 | 0.727 | 0.712 | 0.736 | 1.281 |
+**| Random Forest (No preprocessing) | 0.813 | 0.793 | 0.801 | 0.835 | 47.316 |**
+| Random Forest (Oversampling) | 0.797 | 0.811 | 0.803 | 0.833 | 134.350 |
+| Random Forest (Undersampling) | 0.807 | 0.811 | 0.799 | 0.817 | 32.307 |
+| Naive Bayes Classifier (No preprocessing) | 0.719 | 0.700 | 0.708 | 0.759 | 0.093 |
+**| Naive Bayes Classifier (Oversampling) | 0.730 | 0.732 | 0.730 | 0.764 | 0.101 |**
+| Naive Bayes Classifier (Undersampling) | 0.722 | 0.709 | 0.714 | 0.761 | 0.038 |
+| KNN (No preprocessing) | 0.722 | 0.693 | 0.704 | 0.754 | 0.014 |
+| KNN (Oversampling) | 0.710 | 0.706 | 0.692 | 0.708 | 0.015 |
+| KNN (Undersampling) | 0.714 | 0.708 | 0.695 | 0.712 | 0.010 |
+
 
 The best models have been marked in bold - we construct an ensemble of Naive Bayes and Random Forest to see if that improves the performance 
 
